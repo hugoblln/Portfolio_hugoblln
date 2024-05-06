@@ -1,0 +1,17 @@
+.technos {
+    width: 80%;
+    margin: auto;
+
+    &-first {
+        background-color: $grey;
+        width: 100%;
+        padding: 30px;
+
+        @include flexbox(space-around,center,row);
+
+        &-languages,
+        &-frameworks {
+            @include flexbox(center,center,row,3em)
+        }
+    }
+}

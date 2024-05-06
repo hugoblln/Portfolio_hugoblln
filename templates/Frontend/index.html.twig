@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %}
+
+   {% block stylesheets %}
+            {{ parent()}}
+            {{ encore_entry_link_tags('front') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ parent()}}
+            {{ encore_entry_script_tags('front') }}
+        {% endblock %}
+
+{% block body %}
+{% include "Frontend/home.html.twig" %}
+{% include "Frontend/about.html.twig" %}
+{% include "Frontend/technos.html.twig" %}
+{% endblock %}

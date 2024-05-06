@@ -1,0 +1,72 @@
+.about {
+    width: 80%;
+    margin: auto;
+    margin-top: 30vh;
+
+    @include flexbox(center,center,column, 2em, nowrap);
+
+    @media screen and (min-width: 1024px) {
+        
+        margin-top: -15vh;
+
+        @include flexbox(space-around,stretch,row)
+    }
+
+    &-formation {
+
+        @media screen and (min-width: 1024px) {
+        
+            width: 40%;
+        }
+
+        &-image img {
+            width: 100%;
+
+            @media screen and (min-width: 1024px) {
+        
+                width: auto;
+            }
+        
+
+        }
+
+        &-content {
+
+            h2 {
+                position: relative;
+                top: 15px;
+            }
+
+            p {
+                background: $green;
+                padding: 30px;
+                border-radius: $border-radius;
+            }
+        }
+    }
+
+    &-text {
+        background: $yellow;
+        border-radius: $border-radius;
+        box-shadow: $box-shadow-main;
+        padding: 30px;
+
+        @include flexbox(space-between,start,column,2em);
+
+        @media screen and (min-width: 1024px) {
+        
+            width: 40%;
+        }
+
+
+        
+        h3 a {
+            
+                background: $blue;
+                padding: 5px 15px;
+                border-radius: $border-radius;
+                box-shadow: $box-shadow-main; 
+        }
+    }
+
+}

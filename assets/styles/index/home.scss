@@ -1,0 +1,92 @@
+.home {
+    width: 80%;
+    margin: auto;
+
+    @include flexbox(center,center,column-reverse);
+
+    @media screen and (min-width: 1024px) {
+        
+
+        @include flexbox(space-around,baseline,row)
+    }
+
+    &-presentation {
+        background: $blue;
+        border-radius: $border-radius;
+        padding: 30px;
+        box-shadow: $box-shadow-main;
+        margin-top: -200px;
+
+        @include flexbox(space-between,start,column,2em);
+
+        @media screen and (min-width: 1024px) {
+            width: 40%;
+            height: 405px;
+            gap: 0;
+        }
+       
+      
+
+        h2 a {
+            background: $yellow;
+            padding: 5px 15px;
+            border-radius: $border-radius;
+            box-shadow: $box-shadow-main;
+        }
+    }
+
+    &-infos {
+        
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            width: 60%;
+        }
+
+        @media screen and (min-width: 1024px) {
+            width: 40%;
+        }
+
+        &-name {
+            background: $violet;
+            width: 70%;
+            border-radius: $border-radius;
+            padding: 30px;
+            margin-left: 40px;
+            box-shadow: $box-shadow-main;
+
+            @include flexbox(space-around,flex-end,column, 2em);
+
+            @media screen and (min-width: 1024px) {
+                width: 50%;
+            }
+        }
+
+        &-photo {
+            position: relative;
+            bottom: 150px;
+        }
+
+        &-citation {
+            background: $green;
+            width: 35%;
+            border-radius: $border-radius;
+            padding: 10px;
+            font-size: 14px;
+
+            position: relative;
+            left: 36%;
+            bottom: 300px;
+
+            @media screen and (min-width: 1024px) {
+                width: 60%;
+                bottom: 358px;
+            }
+
+            @media screen and (min-width: 1392px) {
+                bottom: 338px;
+                
+            }
+
+            
+        }
+    }
+}

@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+  }
+
+  
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+div,
+p {
+  font-family: $font-text;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  margin-bottom: 0;
+  font-family: $font-title;
+  letter-spacing: $letter-spacing-title;
+}
+
+h3 {
+  font-size: 24px;
+}
