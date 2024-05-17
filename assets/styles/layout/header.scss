@@ -1,10 +1,16 @@
 header {
     margin-bottom: 10vh;
+
+    position: sticky;
+    top: 0;
+    z-index: 2;
 }
 
 .navbar {
     box-shadow: $box-shadow;
-    background: #e3ecf5;
+    background: $white;
+    background: linear-gradient(45deg, #c5e3ff, transparent);
+    backdrop-filter: blur(20px);
 
     @include flexbox(space-between,center,row);
 
@@ -25,7 +31,8 @@ header {
         height: 60vh;
         box-shadow: $box-shadow;
         z-index: 10;
-        background: #e3ecf5;
+        background: linear-gradient(45deg, #c5e3ff, transparent);
+        backdrop-filter: blur(20px);
         margin-top: -200%;
         transition: 0.5s ease-in-out;
 
@@ -38,12 +45,34 @@ header {
             height: auto;
             background: none;
             box-shadow: none;
+            backdrop-filter: none;
         }
 
         ul {
 
             @media screen and (min-width: 1000px) {
-               @include flexbox(center,center,row)
+               @include flexbox(center,center,row);
+               
+               
+               :first-child a {
+                border-bottom: solid $violet;
+            }
+
+            :nth-child(2) a {
+                border-bottom: solid $green;
+            }
+
+            :nth-child(3) a {
+                color: $grey;
+                text-shadow: 1px 1px  $grey;
+            }
+
+            :last-child a {
+                color: $blue;
+                text-shadow: 1px 1px  $blue;
+            }
+
+
             }
 
             li {
@@ -55,7 +84,6 @@ header {
         }
 
     }
-
 
 
     svg {

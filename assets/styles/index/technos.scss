@@ -1,17 +1,41 @@
 .technos {
-    width: 80%;
-    margin: auto;
 
-    &-first {
-        background-color: $grey;
+    margin-top: 20vh;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 10vh;
+        font-size: 40px;
+    }
+
+    h3 {
+        text-align: center;
+        position: relative;
+        top: 15px;
+    }
+
+    &-languages,
+    &-outils {
         width: 100%;
-        padding: 30px;
+        padding: 50px 0;
 
-        @include flexbox(space-around,center,row);
+        @include flexbox(center,center,row,5em)
+    }
+   
+    &-languages {
+        background: $grey;
+    }
 
-        &-languages,
-        &-frameworks {
-            @include flexbox(center,center,row,3em)
-        }
+    &-outils {
+        background: $green;
+    }
+
+    svg {
+
+        transition: 0.5s ease-in-out;
+
+      &:hover {
+        transform: scale(2);
+    }  
     }
 }
