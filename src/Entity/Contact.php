@@ -35,7 +35,7 @@ class Contact
 
     #[ORM\Column(length: 10)]
     #[Assert\NotBlank]
-    #[Asesert\Regex(
+    #[Assert\Regex(
         pattern: '/^(0|\+33)[1-9]([-. ]?[0-9]{2}){4}$/',
         message: "Le numéro de téléphone doit être au format valide"
     )]

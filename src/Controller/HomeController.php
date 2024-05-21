@@ -1,35 +1,64 @@
-<?php 
+<?php
 
 namespace App\Controller;
 
 use App\Entity\Contact;
 use App\Form\ContactType;
+use Symfony\Component\Mime\Email;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
 
-class HomeController extends AbstractController 
+class HomeController extends AbstractController
 {
-    #[Route('/','app.index', methods: ['GET','POST'])]
-    public function index(Request $request) : Response 
+
+    public function __construct(
+        private EntityManagerInterface $em,
+    ) {
+    }
+
+    #[Route('/', 'app.index', methods: ['GET', 'POST'])]
+    public function index(Request $request, MailerInterface $mailer): Response
     {
 
         $contact = new Contact;
 
-        $form = $this->createForm(ContactType::class, $contact );
+        $form = $this->createForm(ContactType::class, $contact);
 
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $data = $form->getData();
+        try {
+            if ($form->isSubmitted() && $form->isValid()) {
 
-            var_dump($data);
+                // $this->em->persist($contact);
+                // $this->em->flush();
+
+                $data = $form->getData();
+
+                $name = $data['name'];
+                $adress = $data['email'];
+                $phone = $data['phone'];
+                $message = $data['message'];
+
+                $email = (new Email)
+                    ->from($adress)
+                    ->to('hugobellin@yahoo.com')
+                    ->subject('Nouveau message de contact')
+                    ->text("Nom: $name\nEmail: $adress\nTéléphone: $phone\nMessage: $message");
+
+                $mailer->send($email);
+                $this->addFlash('success', 'L\'email a bien été envoyé.');
+            }
+        } catch (TransportExceptionInterface $e) {
+            $this->addFlash('error', 'Une erreur s\'est produite lors de l\'envoi de l\'email.');
         }
 
         return $this->render('Frontend/index.html.twig', [
             'form' => $form
         ]);
     }
-    
 }
