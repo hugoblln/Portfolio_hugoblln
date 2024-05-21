@@ -1,1 +1,0 @@
-(self.webpackChunk=self.webpackChunk||[]).push([[440],{936:(e,s,c)=>{"use strict";c(782)},782:()=>{var e=document.querySelector("svg"),s=document.querySelector(".navbar-links");e.addEventListener("click",(function(){s.classList.toggle("menu-mobile")}))}},e=>{var s;s=936,e(e.s=s)}]);
