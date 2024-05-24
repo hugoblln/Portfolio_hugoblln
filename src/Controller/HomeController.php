@@ -39,10 +39,10 @@ class HomeController extends AbstractController
 
                 $data = $form->getData();
 
-                $name = $data['name'];
-                $adress = $data['email'];
-                $phone = $data['phone'];
-                $message = $data['message'];
+                $name = $contact->getName();
+                $adress = $contact->getEmail();
+                $phone = $contact->getNumber();
+                $message = $contact->getMessage();
 
                 $email = (new Email)
                     ->from($adress)
@@ -52,10 +52,14 @@ class HomeController extends AbstractController
 
                 $mailer->send($email);
                 $this->addFlash('success', 'L\'email a bien été envoyé.');
+
+                return $this->redirectToRoute('app.index');
             }
         } catch (TransportExceptionInterface $e) {
             $this->addFlash('error', 'Une erreur s\'est produite lors de l\'envoi de l\'email.');
         }
+
+
 
         return $this->render('Frontend/index.html.twig', [
             'form' => $form
