@@ -34,8 +34,8 @@ class HomeController extends AbstractController
         try {
             if ($form->isSubmitted() && $form->isValid()) {
 
-                // $this->em->persist($contact);
-                // $this->em->flush();
+                $this->em->persist($contact);
+                $this->em->flush();
 
                 $data = $form->getData();
 
@@ -46,7 +46,7 @@ class HomeController extends AbstractController
 
                 $email = (new Email)
                     ->from($adress)
-                    ->to('hugobellin@yahoo.com')
+                    ->to('hugobellin@gmail.com')
                     ->subject('Nouveau message de contact')
                     ->text("Nom: $name\nEmail: $adress\nTéléphone: $phone\nMessage: $message");
 

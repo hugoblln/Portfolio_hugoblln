@@ -1,20 +1,21 @@
 {% extends "base.html.twig" %}
 
-   {% block stylesheets %}
-            {{ parent()}}
-            {{ encore_entry_link_tags('front') }}
-        {% endblock %}
+{% block stylesheets %}
+{{ parent()}}
+{{ encore_entry_link_tags('front') }}
+{% endblock %}
 
-        {% block javascripts %}
-            {{ parent()}}
-            {{ encore_entry_script_tags('front') }}
-        {% endblock %}
+{% block javascripts %}
+{{ parent()}}
+{{ encore_entry_script_tags('front') }}
+{% endblock %}
 
 {% block body %}
 <main>
-{% include "Frontend/home.html.twig" %}
-{% include "Frontend/about.html.twig" %}
-{% include "Frontend/technos.html.twig" %}
-{% include "Frontend/contact/index.html.twig" %}
+    {% include "Frontend/home.html.twig" %}
+    {% include "Frontend/about.html.twig" %}
+    {% include "Frontend/technos.html.twig" %}
+    {% include "Frontend/projets.html.twig" %}
+    {% include "Frontend/contact/index.html.twig" %}
 </main>
 {% endblock %}
