@@ -21,7 +21,7 @@ Encore
      * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
      */
     .addEntry('app', './assets/app.js')
-    .addEntry('front','./assets/front.js')
+    .addEntry('front', './assets/front.js')
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     .splitEntryChunks()
@@ -29,6 +29,19 @@ Encore
     // will require an extra script tag for runtime.js
     // but, you probably want this, unless you're building a single-page app
     .enableSingleRuntimeChunk()
+
+    .addRule({
+        test: /\.pdf$/,
+        use: [
+            {
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]',
+                    outputPath: 'pdf/'
+                }
+            }
+        ]
+    })
 
     /*
      * FEATURE CONFIG
@@ -69,6 +82,6 @@ Encore
 
     // uncomment if you're having problems with a jQuery plugin
     //.autoProvidejQuery()
-;
+    ;
 
 module.exports = Encore.getWebpackConfig();
