@@ -6,5 +6,32 @@
         font-size: 40px;
     }
 
-    
+    &-container {
+        @include flexbox(space-evenly, center, column, 4em 0);
+        width: 100vw;
+
+        @media screen and (min-width: 1024px) {
+            flex-direction: row;
+        }
+
+    }
+
+    &-cards {
+        background: center / cover url('../../img/monster_website.jpg');
+        width: 300px;
+        height: 200px;
+        box-shadow: $box-shadow-main;
+        border-radius: $border-radius;
+
+        &-text {
+            border-radius: 0 0 $border-radius $border-radius;
+            position: relative;
+            top: 75%;
+            @include flexbox(space-evenly, center, row);
+            padding: 10px;
+            // background: rgba(31, 72, 206, 0);
+            background: $yellow;
+            backdrop-filter: blur(20px);
+        }
+    }
 }

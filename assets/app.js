@@ -11,5 +11,5 @@ import './styles/app.scss';
 import './img/photoHugo.png'
 import './img/illustration-work.png'
 import './img/hugo_bellin_cv.pdf'
-
+import './img/monster_website.jpg'
 
