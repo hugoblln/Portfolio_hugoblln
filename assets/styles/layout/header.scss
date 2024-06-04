@@ -3,7 +3,7 @@ header {
 
     position: sticky;
     top: 0;
-    z-index: 2;
+    z-index: 10;
 }
 
 .navbar {
@@ -12,7 +12,7 @@ header {
     background: linear-gradient(45deg, #c5e3ff, transparent);
     backdrop-filter: blur(20px);
 
-    @include flexbox(space-between,center,row);
+    @include flexbox(space-between, center, row);
 
     &-name {
         padding: 30px;
@@ -20,7 +20,7 @@ header {
         font-family: $font-title;
 
         @media screen and (min-width: 1000px) {
-           font-size: 2.5em;
+            font-size: 2.5em;
         }
     }
 
@@ -31,12 +31,12 @@ header {
         height: 60vh;
         box-shadow: $box-shadow;
         z-index: 10;
-        background: linear-gradient(45deg, #c5e3ff, transparent);
+        background: $blue;
         backdrop-filter: blur(20px);
         margin-top: -200%;
         transition: 0.5s ease-in-out;
 
-        @include flexbox(center,center,column);
+        @include flexbox(center, center, column);
 
         @media screen and (min-width: 1000px) {
             position: inherit;
@@ -51,35 +51,33 @@ header {
         ul {
 
             @media screen and (min-width: 1000px) {
-               @include flexbox(center,center,row);
-               
-               
-               :first-child a {
-                border-bottom: solid $violet;
-            }
+                @include flexbox(center, center, row);
 
-            :nth-child(2) a {
-                border-bottom: solid $green;
-            }
 
-            :nth-child(3) a {
-                color: $grey;
-                text-shadow: 1px 1px  $grey;
-            }
+                :first-child a {
+                    border-bottom: solid $violet;
+                }
 
-            :last-child a {
-                color: $blue;
-                text-shadow: 1px 1px  $blue;
-            }
+                :nth-child(2) a {
+                    border-bottom: solid $green;
+                }
+
+                :nth-child(3) a {
+                    border-bottom: solid $grey;
+                }
+
+                :last-child a {
+                    border-bottom: solid $blue;
+                }
 
 
             }
 
             li {
-            margin: 50px;
-            font-size: 1.5em;
-            text-align: center;
-        }
+                margin: 50px;
+                font-size: 1.5em;
+                text-align: center;
+            }
 
         }
 
@@ -94,7 +92,7 @@ header {
 
         @media screen and (min-width: 1000px) {
             display: none;
-         }
+        }
 
     }
 
