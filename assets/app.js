@@ -1,4 +1,5 @@
 import './bootstrap.js';
+// 
 
 /*
  * Welcome to your app's main JavaScript file!
@@ -12,4 +13,6 @@ import './img/photoHugo.png'
 import './img/illustration-work.png'
 import './img/hugo_bellin_cv.pdf'
 import './img/monster_website.jpg'
+import './img/bibliotheque.png'
+import './img/sejour.png'
 

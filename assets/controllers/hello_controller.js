@@ -11,12 +11,6 @@ import { Controller } from '@hotwired/stimulus';
  */
 export default class extends Controller {
     connect() {
-        const input = this.element.querySelector('input');
-        const span = this.element.querySelector('span');
-        const button = this.element.querySelector('button');
-
-        button.addEventListener('click', (e) => {
-            span.textContent = input.value;
-        });
+        this.element.textContent = 'Hello Stimulus! Edit me in assets/controllers/hello_controller.js';
     }
 }

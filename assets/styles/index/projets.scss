@@ -17,7 +17,6 @@
     }
 
     &-cards {
-        background: center / cover url('../../img/monster_website.jpg');
         width: 300px;
         height: 200px;
         box-shadow: $box-shadow-main;
@@ -34,4 +33,16 @@
             backdrop-filter: blur(20px);
         }
     }
+}
+
+.first {
+    background: center / cover url('../../img/sejour.png');
+}
+
+.second {
+    background: center / cover url('../../img/monster_website.jpg');
+}
+
+.third {
+    background: center / cover url('../../img/bibliotheque.png');
 }
