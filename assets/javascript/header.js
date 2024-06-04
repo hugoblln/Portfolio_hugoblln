@@ -1,8 +1,8 @@
 
-// let svg = document.querySelector('svg')
-// let mobileNav = document.querySelector('.navbar-links')
+let svg = document.querySelector('svg')
+let mobileNav = document.querySelector('.navbar-links')
 
-// svg.addEventListener('click', () => {
-// 	mobileNav.classList.toggle('menu-mobile')
+svg.addEventListener('click', () => {
+	mobileNav.classList.toggle('menu-mobile')
 	 
-// })
+})
