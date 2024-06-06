@@ -21,6 +21,7 @@
 
     &-presentation {
         width: 90%;
+        animation: lend 2s;
 
         h2 {
             padding-top: 30px;
@@ -63,4 +64,13 @@
     }
 
   
+}
+
+@keyframes lend {
+    from {
+        margin-left: -100%;
+    }
+    to {
+        margin-left: 0%;
+    }
 }
