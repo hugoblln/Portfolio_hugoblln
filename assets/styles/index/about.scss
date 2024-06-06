@@ -1,72 +1,65 @@
 .about {
-    width: 95%;
+    width: 90%;
     margin: auto;
-    margin-top: 30vh;
 
-    @include flexbox(center,center,column, 2em, nowrap);
+    @include flexbox(center,center,column, 3em 0);
 
     @media screen and (min-width: 1024px) {
-        
-        margin-top: -15vh;
 
-        @include flexbox(space-around,stretch,row)
+        @include flexbox(space-evenly,stretch,row);
     }
 
     &-formation {
 
-        @media screen and (min-width: 1024px) {
-        
-            width: 40%;
-        }
-
-        &-image img {
-            width: 100%;
-
-            @media screen and (min-width: 1024px) {
-        
-                width: auto;
-            }
-        
-
+        &-image {
+            padding-bottom: 3em;
+            text-align: center;
         }
 
         &-content {
+            background : $primary;
+            padding: 10px;
+            border-radius: $border-radius;
+            box-shadow: $box-shadow;
+        }
 
-            h2 {
-                position: relative;
-                top: 15px;
-            }
-
-            p {
-                background: $green;
-                padding: 30px;
-                border-radius: $border-radius;
-            }
+        @media screen and (min-width: 1024px) {
+            width: 40%;
         }
     }
 
     &-text {
-        background: $yellow;
+        background : $primary;
+        padding: 10px;
         border-radius: $border-radius;
-        box-shadow: $box-shadow-main;
-        padding: 30px;
+        box-shadow: $box-shadow;
 
-        @include flexbox(space-between,start,column,2em);
+        @media screen and (min-width: 1024px ) {
+            @include flexbox(space-evenly,flex-start,column)
+        }
+
+       
+
+        h3 {
+
+            margin-top: 30px;
+
+            a {
+            background: $secondary;
+            padding: 5px 15px;
+            border-radius: $border-radius;
+            box-shadow: $box-shadow; 
+            color: $primary;
+        }
+        } 
 
         @media screen and (min-width: 1024px) {
-        
             width: 40%;
         }
+    }
 
-
-        
-        h3 a {
-            
-                background: $blue;
-                padding: 5px 15px;
-                border-radius: $border-radius;
-                box-shadow: $box-shadow-main; 
-        }
+    h2 {
+        padding-bottom: 10px;
     }
 
 }

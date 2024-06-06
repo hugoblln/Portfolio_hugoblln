@@ -19,7 +19,7 @@
     &-cards {
         width: 300px;
         height: 200px;
-        box-shadow: $box-shadow-main;
+        box-shadow: $box-shadow;
         border-radius: $border-radius;
 
         &-text {
@@ -29,7 +29,7 @@
             @include flexbox(space-evenly, center, row);
             padding: 10px;
             // background: rgba(31, 72, 206, 0);
-            background: $yellow;
+            background: $primary;
             backdrop-filter: blur(20px);
         }
     }

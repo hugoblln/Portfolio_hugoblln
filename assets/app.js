@@ -1,4 +1,4 @@
-import './bootstrap.js';
+// import './bootstrap.js';
 // 
 
 /*
@@ -15,4 +15,7 @@ import './img/hugo_bellin_cv.pdf'
 import './img/monster_website.jpg'
 import './img/bibliotheque.png'
 import './img/sejour.png'
+import './img/background.png'
+import './img/background-html.jpg'
+import './img/background-mobile.png'
 

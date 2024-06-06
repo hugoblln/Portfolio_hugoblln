@@ -5,7 +5,10 @@
     h2 {
         text-align: center;
         margin-bottom: 10vh;
-        font-size: 40px;
+    }
+
+    h2,h3 {
+        color: $primary;
     }
 
     h3 {
@@ -23,11 +26,11 @@
     }
    
     &-languages {
-        background: $grey;
+        background: #001f3f5e;
     }
 
     &-outils {
-        background: $green;
+        background: #001f3f5e;
     }
 
     svg {

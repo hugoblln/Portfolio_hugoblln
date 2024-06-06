@@ -1,13 +1,10 @@
 header {
-    margin-bottom: 10vh;
-
     position: sticky;
     top: 0;
     z-index: 10;
 }
 
 .navbar {
-    box-shadow: $box-shadow;
     background: $primary;
 
     @include flexbox(space-between, center, row);
