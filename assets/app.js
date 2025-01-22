@@ -14,5 +14,6 @@ import './img/illustration-work.png'
 import './img/hugo_bellin_cv.pdf'
 import './img/monster_website.jpg'
 import './img/sejour.png'
+import './img/background.png'
 
 
