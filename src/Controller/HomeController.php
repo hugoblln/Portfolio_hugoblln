@@ -24,45 +24,7 @@ class HomeController extends AbstractController
     #[Route('/', 'app.index', methods: ['GET', 'POST'])]
     public function index(Request $request, MailerInterface $mailer): Response
     {
-
-        $contact = new Contact;
-
-        $form = $this->createForm(ContactType::class, $contact);
-
-        $form->handleRequest($request);
-
-        try {
-            if ($form->isSubmitted() && $form->isValid()) {
-
-                $this->em->persist($contact);
-                $this->em->flush();
-
-                $data = $form->getData();
-
-                $name = $contact->getName();
-                $adress = $contact->getEmail();
-                $phone = $contact->getNumber();
-                $message = $contact->getMessage();
-
-                $email = (new Email)
-                    ->from($adress)
-                    ->to('hugobellin@gmail.com')
-                    ->subject('Nouveau message de contact')
-                    ->text("Nom: $name\nEmail: $adress\nTéléphone: $phone\nMessage: $message");
-
-                $mailer->send($email);
-                $this->addFlash('success', 'L\'email a bien été envoyé.');
-
-                return $this->redirectToRoute('app.index');
-            }
-        } catch (TransportExceptionInterface $e) {
-            $this->addFlash('error', 'Une erreur s\'est produite lors de l\'envoi de l\'email.');
-        }
-
-
-
-        return $this->render('Frontend/index.html.twig', [
-            'form' => $form
+        return $this->render('Frontend/home.html.twig', [
         ]);
     }
 }
