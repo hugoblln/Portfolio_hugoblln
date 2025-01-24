@@ -13,9 +13,16 @@
     font-family: $font-primary;
     font-size: 16px;
     font-weight: 400;
-    color: $primary;
     line-height: 28px;
     transition: 0.5s;
 
+    height: 100vh;
     background: url('../img/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
   }
+
+ a {
+  text-decoration: none;
+  color: $white;
+ }

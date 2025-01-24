@@ -1,3 +1,45 @@
 .home {
+    height: 100vh;
     @include flexbox(center, center, column);
+}
+
+.circle {
+    background-color: $circle-color;
+    border-radius: $circle;
+    height: 350px;
+    width: 350px;
+
+    @include flexbox(center, center);
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+        height: 500px;
+        width: 500px;
+        
+    }
+
+    &-title {
+        background: linear-gradient(to bottom, #808182, #1f4877);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+    }
+
+    &-text {
+        background: linear-gradient(to bottom, #808182, #1f4877);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+font-weight: bold;
+
+&-button {
+    background: linear-gradient(to bottom, #808182, #1f4877);
+    -webkit-text-fill-color: none;
+    color: $white;
+    padding: $button-padding;
+    border-radius: 5px;
+}
+
+    }
 }
