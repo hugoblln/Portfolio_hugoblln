@@ -4,12 +4,15 @@
 }
 
 .circle {
+
+    padding: 10px;
+
     background-color: $circle-color;
     border-radius: $circle;
     height: 350px;
     width: 350px;
 
-    @include flexbox(center, center);
+    @include flexbox(space-around, center, column);
     text-align: center;
 
     @media screen and (min-width: 768px) {
@@ -23,6 +26,15 @@
 background-clip: text;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
+
+&-img {
+    img {
+        border-radius: $circle;
+        box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.1);
+    }
+}
+
+
     }
 
     &-text {
@@ -41,5 +53,11 @@ font-weight: bold;
     border-radius: 5px;
 }
 
+    }
+
+    &-border {
+        border-bottom:1px solid black;
+    
+    
     }
 }
