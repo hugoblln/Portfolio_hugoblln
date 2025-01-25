@@ -2,7 +2,8 @@
     display: flex;
     justify-content: $justify-content;
     align-items: $align-items;
+    flex-direction: $flex-direction;
     gap: $gap;
     flex-wrap: $flex-wrap;
-    flex-direction: $flex-direction
+    
 }
