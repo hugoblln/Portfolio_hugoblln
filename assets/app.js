@@ -16,4 +16,6 @@ import './img/monster_website.jpg'
 import './img/sejour.png'
 import './img/background.png'
 
+import './javascript/form.js'
+
 

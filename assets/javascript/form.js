@@ -1,18 +1,21 @@
-const inputs = document.querySelectorAll(".input");
+const circles = document.querySelectorAll(".technos-presentation-row-circle");
 
-function focusFunc() {
-  let parent = this.parentNode;
-  parent.classList.add("focus");
-}
 
-function blurFunc() {
-  let parent = this.parentNode;
-  if (this.value == "") {
-    parent.classList.remove("focus");
+circles.forEach((circle) => {
+  if (!circle.dataset.originalContent) {
+    circle.dataset.originalContent = circle.innerHTML;
   }
-}
+});
 
-inputs.forEach((input) => {
-  input.addEventListener("focus", focusFunc);
-  input.addEventListener("blur", blurFunc);
+circles.forEach((circle) => {
+
+  circle.addEventListener("mouseover", () => {
+    circle.classList.add("circle-hover");
+    circle.innerHTML = circle.dataset.hoverContent;
+  });
+
+  circle.addEventListener("mouseout", () => {
+    circle.classList.remove("circle-hover");
+    circle.innerHTML = circle.dataset.originalContent;
+  });
 });

@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+infos 
+{{ parent() }}
+{% endblock %}
+
+{% block body %}
+<main class="infos">
+<div class="infos-title">
+    <h1>Qui suis-je</h1>
+</div>
+<div class="infos-presentation">
+<p>Passionné par la technologie et le développement web, j'ai récemment effectué une reconversion professionnelle après avoir travaillé comme conseiller immobilier. Cette expérience m'a permis de développer des compétences en communication, en négociation et en gestion de projet, des qualités essentielles que j'applique désormais dans le domaine du développement web. <br> Désireux de continuer à apprendre et à me perfectionner, je suis toujours à la recherche de nouvelles connaissances et compétences pour améliorer mon travail et rester à la pointe de l'innovation.</p>
+</div>
+<div class="infos-passions">
+<p>En dehors du travail, je suis passionné de football, de cinéma et d'histoire, des domaines qui nourrissent ma curiosité et mon esprit créatif.</p>
+</div>
+<a href="{{ path('app.index') }}" class="button">Retour</a>
+</main>
+{% endblock %}

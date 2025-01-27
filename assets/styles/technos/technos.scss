@@ -1,0 +1,85 @@
+.technos{
+    &-title {
+        height: 200px;
+        width: 200px;
+        border-radius: $circle;
+        background: $circle-color;
+        box-shadow: $shadow;
+        margin-top: 5px;
+        text-align: center;
+
+        @include flexbox(center, center, column);
+
+        h1 {
+            
+                background: linear-gradient(to bottom, #808182, #1f4877);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-transform: uppercase
+                
+        }
+    }
+
+    &-presentation {
+
+        @include flexbox(space-evenly, center, column,3em);
+
+        position: relative;
+        top: -110px;
+
+        @media screen and (min-width: 628px) {
+            gap: 0;
+        }
+
+            &-row {
+                @include flexbox(center,center,row, 3em);
+
+
+                &-circle {
+                    border-radius: $circle;
+                    background: $primary;
+                    box-shadow: $shadow;
+                    height: 250px;
+                    width: 250px;
+                    text-align: center;
+                    margin: 20px;
+                    font-weight: bold;
+                    color: $white;
+
+                    animation: border 1s linear infinite;
+
+
+                    @include flexbox(center, center, row, 1em);
+
+                    p {
+                        font-weight: bold;
+                        font-size: 24px;
+                    }
+                }
+
+            }
+
+         
+    }
+} 
+
+.circle-hover {
+    background: $circle-color;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+@keyframes border {
+    0% {
+        border-color: #1F4877;
+        border-width: 5px;
+    }
+    50% {
+        border-color: #808182;
+        border-width: 10px;
+    }
+    100% {
+        border-color: #1F4877;
+        border-width: 5px;
+    }
+}

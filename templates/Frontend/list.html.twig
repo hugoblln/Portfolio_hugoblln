@@ -7,14 +7,13 @@ liste
 
 
 {% block body %}
-<main class="list">
-<section class="list-home">
+<main class="list-home">
 <div class="list-home-row">
 <div class="list-home-row-circle">
-<a href="#">Qui suis-je</a>
+<a href="{{ path('app.infos')}}">Qui suis-je</a>
 </div>
 <div class="list-home-row-circle">
-<a href="#">Mes languages</a>
+<a href="{{path('app.technos')}}">Mes technos</a>
 </div>
 </div>
 <div class="list-home-row">
@@ -25,7 +24,6 @@ liste
 <a href="#">Contact</a>
 </div>
 </div>
-</section>
 <a href="{{ path('app.index') }}" class="button">Retour</a>
-</main
+</main>
 {% endblock %}
