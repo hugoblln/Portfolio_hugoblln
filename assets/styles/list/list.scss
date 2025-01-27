@@ -1,41 +1,51 @@
 .list-home {
 
-    height: 100vh;
+    min-height: 100vh;
 
-    @include flexbox(space-evenly, center, row);
+    @include flexbox(space-evenly, center, column,3em);
 
-    &-row-circle {
+    @media screen and (min-width: 628px) {
+       gap: 0;
+        
+    }
+
+    &-row {
+
+        @include flexbox(center,center,row, 3em);
+
+        &-circle {
         border-radius: $circle;
-        background: $circle-color;
-        box-shadow: $shadow;
-        height: 250px;
-        width: 250px;
-        text-align: center;
-        margin: 20px;
-        font-weight: bold;
-        text-transform: uppercase;
+                background: $circle-color;
+                box-shadow: $shadow;
+                height: 250px;
+                width: 250px;
+                text-align: center;
+                margin: 20px;
+                font-weight: bold;
+                text-transform: uppercase;
 
+                @include flexbox(center, center, column);
 
-       p {
-        background: linear-gradient(to bottom, #808182, #1f4877);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-       }
+            a {
+                background: linear-gradient(to bottom, #808182, #1f4877);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
 
-        @include flexbox(center, center, column);
-
-        &-animation {
-            position: relative;
-            width:30px;
-            height:30px;
-            background:cyan;
-            border-radius:50%;
-            overflow:hidden;
-            transform-origin: 60px 60px;
-            
-            animation: circle 6s linear infinite;
+         
         }
+       
+
+       
+    }
+
+
+}
+
+.list {
+    .button {
+        right: -50%;
     }
 }
 
