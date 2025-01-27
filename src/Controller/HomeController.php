@@ -22,7 +22,7 @@ class HomeController extends AbstractController
     }
 
     #[Route('/', 'app.index', methods: ['GET', 'POST'])]
-    public function index(Request $request, MailerInterface $mailer): Response
+    public function index(): Response
     {
         return $this->render('Frontend/home.html.twig', [
         ]);

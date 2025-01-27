@@ -1,0 +1,54 @@
+.list-home {
+
+    height: 100vh;
+
+    @include flexbox(space-evenly, center, row);
+
+    &-row-circle {
+        border-radius: $circle;
+        background: $circle-color;
+        box-shadow: $shadow;
+        height: 250px;
+        width: 250px;
+        text-align: center;
+        margin: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+
+
+       p {
+        background: linear-gradient(to bottom, #808182, #1f4877);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+       }
+
+        @include flexbox(center, center, column);
+
+        &-animation {
+            position: relative;
+            width:30px;
+            height:30px;
+            background:cyan;
+            border-radius:50%;
+            overflow:hidden;
+            transform-origin: 60px 60px;
+            
+            animation: circle 6s linear infinite;
+        }
+    }
+}
+
+@keyframes circle{
+    0%{
+      transform:rotate(0deg)
+                translate(-165px)
+                rotate(0deg);
+    
+    }
+    100%{
+      transform:rotate(360deg)
+                translate(-165px)
+                rotate(-360deg);
+    }
+  }
