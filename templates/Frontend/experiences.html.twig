@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+expèriences
+{{ parent() }}
+{% endblock %}
+
+{% block body %}
+<main class="experiences">
+<div class="experiences-title">
+    <h1>expèriences</h1>
+</div>
+<div class="experiences-diplomes">
+<p>2023/2024 - titre RNCP5, bac +2 Développeur web et web mobile</p>
+<p>2021/2023 - BTS Professions immobilière </p>
+<p>2016/2018 - Baccalauréat Economique et Social</p>
+</div>
+<div class="experiences-travail">
+<p>2024 - stage Développeur symfony chez Praxi Consulting formation</p>   
+<p>2021/2023 - Conseiller immobilier en alternance chez Nestenn</p>
+<p>2018/2020 - diverses missions</p>
+</div>
+<a href="{{ path('app.list') }}" class="button">Retour</a>
+</main>
+{% endblock %}

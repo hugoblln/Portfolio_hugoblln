@@ -1,4 +1,4 @@
-.technos{
+.contact{
     &-title {
         height: 200px;
         width: 200px;
@@ -59,24 +59,20 @@
 
                 &-circle {
                     border-radius: $circle;
-                    background: $primary;
+                    background: $circle-color;
                     box-shadow: $shadow;
                     height: 250px;
                     width: 250px;
                     text-align: center;
                     margin: 20px;
                     font-weight: bold;
-                    color: $white;
+                   
 
                     animation: border 1s linear infinite;
 
 
                     @include flexbox(center, center, row, 1em);
 
-                    p {
-                        font-weight: bold;
-                        font-size: 24px;
-                    }
                 }
 
             }

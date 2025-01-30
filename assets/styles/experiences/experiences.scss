@@ -1,4 +1,4 @@
-.infos {
+.experiences {
 
     margin-top: 100px;
 
@@ -55,25 +55,26 @@
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        text-transform: uppercase
+        text-transform: uppercase;
+        font-size: 26px;
         }
 
         @include flexbox(center, center, column);
     }
 
-    &-presentation {
-        height: 280px;
-        width: 280px;
+    &-diplomes {
+        height: 250px;
+        width: 250px;
         border-radius: $circle;
         background: $circle-color;
         padding: 50px;
         box-shadow: $shadow;
 
-        @include flexbox(center, center, column);
+        @include flexbox(space-evenly, center, column);
 
         @media screen and (min-width: 768px) and (max-width: 1285px) {
-            height: 300px;
-            width: 300px;
+            height: 280px;
+            width: 280px;
 
             position: relative;
             top: -100px;
@@ -83,8 +84,8 @@
 
         @media screen and (min-width: 1285px) {
 
-            height: 400px;
-            width: 400px;
+            height: 350px;
+            width: 350px;
 
             position: relative;
             top: -150px;
@@ -93,15 +94,15 @@
         }
     }
 
-    &-passions {
+    &-travail {
         border-radius: $circle;
         background: $circle-color;
-        height: 200px;
-        width: 200px;
+        height: 250px;
+        width: 250px;
         margin-right: 25%;
         box-shadow: $shadow;
 
-        @include flexbox(center, center, column);
+        @include flexbox(space-evenly, center, column);
 
         @media screen and (min-width: 768px) and (max-width: 1285px) {
             position: relative;
@@ -111,8 +112,8 @@
 
         @media screen and (min-width: 1285px) {
             margin-right: 20%;
-            height: 250px;
-            width:250px;
+            height: 280px;
+            width:280px;
             padding: 20px;
     
 
