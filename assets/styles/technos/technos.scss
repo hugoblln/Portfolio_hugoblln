@@ -13,22 +13,22 @@
 
           @media screen and (min-width: 1200px) and (max-width: 1399px) {
             left: 100px;
-            top: 50px;
+            top: 10px;
           }
 
           @media screen and (min-width: 1400px) and (max-width: 1600px) {
             left: 200px;
-            top: 75px;
+            top: 15px;
           }
 
           @media screen and (min-width: 1600px) and (max-width: 1799px) {
             left: 300px;
-            top: 100px;
+            top: 20px;
           }
 
           @media screen and (min-width: 1800px) {
             left: 350px;
-            top: 120px;
+            top: 25px;
           }
 
         @include flexbox(center, center, column);
@@ -49,8 +49,14 @@
         @include flexbox(space-evenly, center, column,3em);
 
 
+
         @media screen and (min-width: 628px) {
             gap: 0;
+        }
+
+        @media screen and (min-width: 1080px) {
+            position: relative;
+            bottom: 100px;
         }
 
             &-row {
