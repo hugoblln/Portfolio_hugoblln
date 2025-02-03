@@ -1,6 +1,6 @@
 .experiences {
 
-    margin-top: 100px;
+    margin-top: 20px;
 
     display: flex;
             flex-direction: column;
@@ -102,11 +102,13 @@
         margin-right: 25%;
         box-shadow: $shadow;
 
+        padding: 30px;
+
         @include flexbox(space-evenly, center, column);
 
         @media screen and (min-width: 768px) and (max-width: 1285px) {
             position: relative;
-            top: -190px;
+            top: -180px;
             
         }
 
@@ -114,7 +116,6 @@
             margin-right: 20%;
             height: 280px;
             width:280px;
-            padding: 20px;
     
 
             position: relative;
@@ -135,5 +136,9 @@
             top: -450px;
             
         }
+    }
+
+    .button {
+        border: solid 1px $white;
     }
 }
